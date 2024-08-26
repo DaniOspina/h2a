@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Asegúrate de que Bootstrap esté importado
 
 const UserList = () => {
   const [users, setUsers] = useState([
@@ -10,28 +11,41 @@ const UserList = () => {
   const [newUserName, setNewUserName] = useState('');
 
   const addUser = () => {
-    const newUser = {
-      id: users.length + 1,
-      name: newUserName,
-    };
-    setUsers([...users, newUser]);
-    setNewUserName('');
+    if (newUserName.trim()) {
+      const newUser = {
+        id: users.length + 1,
+        name: newUserName,
+      };
+      setUsers([...users, newUser]);
+      setNewUserName('');
+    }
   };
 
   return (
-    <div>
-      <ul>
+    <div className="container my-4">
+      <h2>Lista de Usuarios</h2>
+      <ul className="list-group mb-3">
         {users.map(user => (
-          <li key={user.id}>{user.name}</li>
+          <li key={user.id} className="list-group-item d-flex justify-content-between align-items-center">
+            {user.name}
+          </li>
         ))}
       </ul>
-      <input
-        type="text"
-        value={newUserName}
-        onChange={(e) => setNewUserName(e.target.value)}
-        placeholder="Añadir nuevo usuario"
-      />
-      <button onClick={addUser}>Añadir Usuario</button>
+      <div className="input-group">
+        <input
+          type="text"
+          className="form-control"
+          value={newUserName}
+          onChange={(e) => setNewUserName(e.target.value)}
+          placeholder="Añadir nuevo usuario"
+        />
+        <button
+          className="btn btn-primary ms-2"
+          onClick={addUser}
+        >
+          Añadir Usuario
+        </button>
+      </div>
     </div>
   );
 };

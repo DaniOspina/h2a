@@ -1,27 +1,27 @@
 import React from 'react';
-import Link from "next/link";
-import UserList from "./components/UserList";
-import sumEvenNumbers from "./utils/sumNum";
-import GitHubUserList from './components/GitHubUserList';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import UserList from './components/UserList';
+import sumEvenNumbers from './utils/sumNum';
+import Link from 'next/link';
+import styles from './page.module.css';
 
 const Home = () => {
   const numbers = [1, 2, 3, 4, 5, 6];
   const sum = sumEvenNumbers(numbers);
+
   return (
-    <div>
-      <header>
-        <h1>Mi Página Web</h1>
-      </header>
+    <div className={`${styles.content}`}>
+      <h1 className={`${styles.head} text-center`}>Desafíos</h1>
       <main>
-        <p>Bienvenido a mi página web.</p>
-        <p>La lista de los números es: {numbers}</p>
-        <p>La suma de los números pares es: {sum}</p>
+        <div className="mb-4">
+          <p className="lead">Desafío 2: Javascript</p>
+          <p className="fw-bold">La lista de los números es: {numbers.join(', ')}</p>
+          <p className="fw-bold">La suma de los números pares es: {sum}</p>
+        </div>
+        <p className="lead">Desafío 3: React</p>
         <UserList />
-        <GitHubUserList />
+        <Link href="/github-users">Ver Usuarios de GitHub</Link>
       </main>
-      <footer>
-        <p>© 2024 Mi Sitio Web</p>
-      </footer>
     </div>
   );
 };
