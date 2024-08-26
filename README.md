@@ -1,4 +1,3 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
@@ -16,21 +15,66 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Desafío 0 : Conceptos Básicos
 
-## Learn More
+- ¿Qué es HTML5 y cuáles son algunas de sus características principales?
 
-To learn more about Next.js, take a look at the following resources:
+HTML5 es la última versión del lenguaje de marcado HTML (HyperText Markup Language).
+-Semántica Mejorada: Nuevas etiquetas, que ayudan a definir la esrtuctura de una página.
+-Soporte para Multimedia: Proporciona etiquetas nativas para manejar multimedia.
+-API y Funcionalidades Avanzadas:  Introduce API para mejorar la funcionalidad de las aplicaciones web.
+-Formularios Mejorados: Nuevos tipos de entrada para mejorar la validación y experiencia del usuario en formularios.
+-Compatibilidad con Dispositivos Móviles: Mejora diseño adaptable y rendimiento en dispositivos móviles.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Explica la diferencia entre CSS Grid y Flexbox y cuándo usarías uno sobre el otro.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+CSS Grid:
 
-## Deploy on Vercel
+Propósito: Ideal para crear diseños bidimensionales, es decir, diseños que requieren filas y columnas. Funciona como una rejilla.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Lo usaria para diseñar una cuadricula de productos o servicios de una tienda en línea.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Flexbox:
+
+Propósito: Ideal para diseños unidimensionales, es decir, diseños en una sola dirección (fila o columna).
+
+Lo usaría para distribuir botones en una barra de navegación.
+
+
+- ¿Qué es el responsive design y por qué es importante?
+
+Responsive Design (diseño web adaptable) es una metodología de diseño web que busca crear sitios web que se adapten a diferentes tamaños de pantalla y dispositivos.
+
+Importancia:
+
+- Experiencia del Usuario.
+- Accesibilidad.
+- SEO.
+- Reducción de Mantenimiento.
+
+
+- ¿Cuál es la diferencia entre JavaScript y TypeScript?
+
+Diferencias Clave:
+
+- Tipado: TypeScript ofrece tipado estático, mientras que JavaScript es dinámico.
+- Errores: TypeScript ayuda a identificar errores durante la compilación, mientras que JavaScript solo los muestra en tiempo de ejecución.
+- Compatibilidad: TypeScript necesita ser transpilado a JavaScript para ejecutarse en el navegador, mientras que JavaScript se ejecuta directamente.
+
+
+Desafío 5: Bonus:
+
+ Identifica al menos dos técnicas de optimización de rendimiento en una aplicación web y explica cómo implementarlas.
+
+
+Técnicas:
+
+1. División de Código (Code Splitting):
+
+La división de código permite cargar solo las partes del código que son necesarias para la página actual, en lugar de cargar toda la aplicación de una vez. Esto puede reducir el tiempo de carga inicial y mejorar la experiencia del usuario.
+
+
+2. Optimización de Imágenes:
+
+Las imágenes pueden ser grandes en tamaño de archivo, lo que ralentiza tu aplicación. Optimizar imágenes redimensionándolas, comprimiéndolas y sirviéndolas en formatos, puede mejorar significativamente el rendimiento.
